@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>NL Maps &mdash; samenwerken in kaartviewers</title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/webmapper.css">
+<!--        <link rel="stylesheet" href="css/print/paper.css">
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>-->
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-state='openingslide' data-background="img/foss4gnl-head.jpg" data-background-size="100%" style="opacity: 0.8;">
+                    <h1 style="color: #fff;">NL Maps</h2>
+                    <h2 style="color: #fff;">Samenwerken in kaartviewers</h2>
+                    <h3 style="color: #fff;">Edward Mac Gillavry, Webmapper</h3>
+                    <h3 style="color: #fff;">Almere, 11 jul 2018</h3>
+                </section>
+                <section>
+                    <h1>Introductie</h1>
+                    <ul>
+                        <li class="fragment visible" data-fragment-index="1">Edward Mac Gillavry
+                        <ul>
+                            <li>Product-owner NL Maps</li>
+                            <li>Webmapper</li>
+                            <li>HAS Den Bosch, Geo Academie</li>
+                        </ul>
+                        </li>
+                        <li class="fragment visible" data-fragment-index="2">Webmapper
+                        <ul>
+                            <li>Wij maken interactieve kaarten en datavisualisaties.</li>
+                            <li>Onze expertise is open {source; data; standaarden}.</li>
+                            <li>Onze kracht is het combineren van cartografie, webtechnologie en geo.</li>
+                            <li>Edward, Hans, Niene en Steven</li>
+                        </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Doelstelling</h1>
+                    <ul>
+                        <li class="fragment visible" data-fragment-index="1">Stand van zaken NL Maps</li>
+                        <li class="fragment visible" data-fragment-index="2">Kaartviewers bij overheden</li>
+                        <li class="fragment visible" data-fragment-index="3">Lessen</li>
+                        <li class="fragment visible" data-fragment-index="4">Conclusie</li>
+                    </ul>
+                </section>
+                <section data-background="img/youtube-nlmaps.png" data-background-size="100%"></section>
+                <section>
+                    <h1>NL Maps</h1>
+                    <ul>
+                        <li>Kadaster</li>
+                        <li>BRT-Achtergrondkaart</li>
+                        <li>OpenLayers/Leaflet/GMaps/Mapbox</li>
+                        <li>Wizard + bibliotheek</li>
+                        <li>Web-ontwikkelaars</li>
+                    </ul>
+                </section>
+                <section data-background-iframe="https://nlmaps.nl" data-background-interactive></section>
+                <section>
+                    <h1>Configuratie</h1>
+                    <ul>
+                        <li>Achtergrondlagen (XYZ)</li>
+                        <li>Thema-lagen (WMS)</li>
+                        <li>Standaard-kaartbeeld (bbox, center, zoom)</li>
+                        <li>Zoekgebied van de geocoder</li>
+                        <li>UI styling</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Nieuwe functionaliteit</h1>
+                    <ul>
+                        <li>Feature query (kaartprikker)</li>
+                        <li>Selecteer GeoJSON features op de kaart</li>
+                    </ul>
+                </section>
+                <section data-background="img/nlmaps-mora.png" data-background-size="100%"></section>
+                <section data-background="img/nlmaps-tvm.png" data-background-size="100%"></section>
+                <section>
+                    <a href="https://www.kadaster.nl"><img src="img/logo-kadaster.png"/></a><br/>
+                    <a href="https://data.amsterdam.nl/"><img src="img/logo-adam.png"/></a><br/>
+                    <a href="https://www.pdok.nl"><img src="img/logo-pdok.png"/></a><br/>
+                    <a href="https://www.codefor.nl/"><img src="img/logo-codefornl.png"/></a><br />
+                    <a href="https://osgeo.nl"><img src="img/logo-osgeonl.png"/></a>
+                </section>
+                <section data-state='openingslide' data-background="img/foss4gnl-head.jpg" data-background-size="100%" style="opacity: 0.8;">
+                    <h1 style="color: #fff;">Kaartviewers bij overheden</h1>
+                </section>
+                <section>
+                    <img src="img/logo_aan_de_slag_met_de_omgevingswet.jpg"/><br/>
+                    <q><strong>Met één klik op de kaart</strong> weet de gebruiker welke regels er binnen een bepaald gebied van kracht zijn en kan daar ook gegevens over de  fysieke omgevingskwaliteit raadplegen.</q>
+                    <p>&mdash; Visie-document DSO</p>
+                </section>
+                <section>
+                    <a href="https://twitter.com/geoawesomeness/status/992043246527315969"><img src="img/gmaps-pricing.png"/></a>
+                    <p>&mdash; Google Maps API ~1400%+</p>
+                </section>
+                <section>
+                    <a href="https://twitter.com/Palinuro/status/999219812109881345"><img src="img/klic-viewer-kadaster.png"/></a>
+                    <p>&mdash; Wet Markt en Overheid?</p>
+                </section>
+                <section>
+                <p><a href="https://extranet.infopuntveiligheid.nl/Infopuntdocumenten/onderzoeksrapportaggebruik-geo-viewers-binnen-overheid.pdf">Gebruik geo-viewers op overheidswebsites</a>
+                <ul>
+                <li>Webrichtlijnen</li>
+                <li>Privacy</li>
+                <li>GeoZeT én Google Maps</li>
+                </ul></p>
+                <p>&mdash; Geon (2011)</p>
+                </section>
+                <section>
+                    <h1>Viewers</h1>
+                    <ul>
+                        <li><a href="https://github.com/openlayers/openlayers">OpenLayers</a></li>
+                        <li><a href="https://github.com/Leaflet/Leaflet">Leaflet</a></li>
+                        <li><a href="https://github.com/flamingo-geocms/flamingo">Flamingo GeoCMS</a></li>
+                        <li><a href="https://github.com/UBR-KOOP/Geozet">GeoZeT</a></li>
+                        <li><a href="https://github.com/heron-mc/heron-mc">Heron MC</a></li>
+                        <li><a href="https://github.com/Geonovum/pdokkaart/">PDOK Kaart</a></li>
+                        <li><a href="https://github.com/kadaster/nlmaps">NL Maps</a></li>
+                    </ul>
+                    <p>Wat missen we hier nog?</p>
+                </section>
+                <section data-background="img/vb-flamingo.png" data-background-size="100%"></section>
+                <section>
+                    <h1>Flamingo GeoCMS</h1>
+                    <ul>
+                        <li>Flamingo Gebruikerscommunity</li>
+                        <li>OpenLayers 3 (PR voor OL 4)</li>
+                        <li>ExtJS</li>
+                        <li>Java-backend (GeoTools, Solr)</li>
+                        <li>Admin-module</li>
+                    </ul>
+                </section>
+                <section data-background="img/vb-geozet.png" data-background-size="100%"></section>
+                <section>
+                    <h1>GeoZeT</h1>
+                    <ul>
+                        <li>KOOP</li>
+                        <li>OpenLayers 2.13</li>
+                        <li>ExtJS</li>
+                        <li>Java-backend</li>
+                        <li>Lijst-view</li>
+                        <li>Bekendmakingen</li>
+                        <li>Webrichtlijnen</li>
+                    </ul>
+                </section>
+                <section data-background="img/vb-heronmc.png" data-background-size="100%"></section>
+                <section>
+                    <h1>Heron MC</h1>
+                    <ul>
+                        <li>PDOK Viewer, Warwickshire, &hellip;</li>
+                        <li>OpenLayers 2.13</li>
+                        <li>ExtJS</li>
+                    </ul>
+                </section>
+                <section data-background="img/vb-pdokkaart.png" data-background-size="100%"></section>
+                <section>
+                    <h1>PDOK Kaart</h1>
+                    <ul>
+                        <li>Kadaster, RWS</li>
+                        <li>OpenLayers 2.13</li>
+                        <li>Wizard (jQuery) en API</li>
+                    </ul>
+                </section>
+                <section data-state='openingslide' data-background="img/foss4gnl-head.jpg" data-background-size="100%" style="opacity: 0.8;">
+                    <h1 style="color: #fff;">Lessen</h1>
+                </section>
+                <section>
+                    <h1>Hou het klein</h1>
+                    <ul>
+                        <li>Functionaliteit</li>
+                        <li>Modulaire opbouw</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Community</h1>
+                    <ul>
+                        <li>Gooi het niet over de schutting</li>
+                        <li>Jij bent onderdeel van de community</li>
+                        <li>Blijf de community betrekken</li>
+                        <li>Slack, GitHub</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Afwegingen</h1>
+                    <ul>
+                        <li class="fragment visible" data-fragment-index="1">Doel: Exploration (WebGIS) v. Explanation (Kaart)</li>
+                        <li class="fragment visible" data-fragment-index="2">Doelgroep: intern of extern</li>
+                        <li class="fragment visible" data-fragment-index="3">Techniek/frameworks: React, Vue, Angular</li>
+                        <li class="fragment visible" data-fragment-index="4">Organisatie, beheer, community</li>
+                    </ul>
+                </section>
+                <section data-state='openingslide' data-background="img/foss4gnl-head.jpg" data-background-size="100%" style="opacity: 0.8;">
+                    <h1 style="color: #fff;">Conclusies</h1>
+                </section>
+                <section>
+                    <h1>Conclusies</h1>
+                        <li class="fragment visible" data-fragment-index="1">Hou het klein</li>
+                        <li class="fragment visible" data-fragment-index="2">Blijf ontwikkelen</li>
+                        <li class="fragment visible" data-fragment-index="3">Meerdere implementaties</li>
+                        <li class="fragment visible" data-fragment-index="4">Community</li>
+                        <li class="fragment visible" data-fragment-index="5">Meer documentatie</li>
+                        <li class="fragment visible" data-fragment-index="6">Doe mee!</li>
+                </section>
+                <section>
+                    <h1>Doe mee</h1>
+                    <uL>
+                        <li>NLMaps: <a href="https://nlmaps.nl">https://nlmaps.nl</a></li>
+                        <li>GitHub: <a href="https://github.com/kadaster/nlmaps">https://github.com/kadaster/nlmaps</a></li>
+                        <li>Slack: <a href="https://praatmee.codefor.nl">https://praatmee.codefor.nl</a></li>
+                    </uL>
+                </section>
+                <section>
+                    <h1>Hartelijk dank!</h1>
+                    <h2>Edward Mac Gillavry</h2>
+                    <p><a href="https://twitter.com/emacgillavry">https://twitter.com/emacgillavry</a></p>
+                    <p><a href="https://webmapper.net">https://webmapper.net</a></p>
+                </section>
+            </div>
+        </div>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+//            Reveal.configure({ pdfMaxPagesPerSlide: 1 });
+        </script>
+    </body>
+</html>
