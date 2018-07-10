@@ -1,6 +1,6 @@
-# Samenwerking in kaartviewers voor [FOSS4GNL](http://foss4g.nl/] 2018
+# Samenwerking in kaartviewers voor [FOSS4GNL](http://foss4g.nl/) 2018
 
-## Door Edward Mac Gilalvry
+## Door Edward Mac Gillavry
 ## Webmapper
 
 * [Presentatie](https://emacgillavry.github.io/foss4gnl2018-nlmaps/)
